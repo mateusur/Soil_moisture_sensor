@@ -84,7 +84,7 @@ int read_soil() {
     sensor_value += analogRead(SOIL_PIN);
   }
   sensor_value /= 5 ;
-  sensor_value = map(sensor_value, 0, 1023, 0, 100);  // value to output to a PWM pin
+  sensor_value = map(sensor_value, 0, 1023, 100, 0);  // value to output to a PWM pin
   Serial.println("sensor = ");
   Serial.println(sensor_value);
   return sensor_value;
